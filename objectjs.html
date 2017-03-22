@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Objects</title>
+    </head>
+    <body>
+        <div id="demo"></div>
+        <script>
+            var names=[
+                {name:"John",age:25},
+                {name:"Sam",age:21},
+                {name:"George",age:30},
+                {name:"Peter",age:35},
+                {name:"Anna",age:27}
+            ];
+            
+            
+            function myFunction(){
+                names.sort(function(a,b){
+                  return a.age - b.age; 
+                });
+                 var x="<ol>";
+                   for (var i=0 in names){
+                        x += "<li>"+"Name:"+names[i].name +","+ "Age:" +names[i].age+"</li>";
+                   }
+                    x+="</ol>";
+                    document.getElementById("demo").innerHTML = x;
+            }
+            myFunction();
+          
+        </script>
+    </body>
+</html>
